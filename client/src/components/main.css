@@ -1,0 +1,36 @@
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-self: center;
+    width: 65vw;
+    gap: 17px;
+}
+
+.char-box{
+    display: inline;
+    padding: 1em;
+    align-items: baseline;
+    flex-direction: column;
+    background-color: beige;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.avatar{
+    width:90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.title {
+    width:100%;
+    float:left;
+  }
+  
