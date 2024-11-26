@@ -17,7 +17,6 @@
 
 
 .nav-button{
-    color: rgb(25, 23, 37);
     font-size: 20px;
     text-align: center;
     padding: 15 px 35px;
@@ -25,7 +24,7 @@
     text-decoration: none;
     border-radius: 15px;
     transition: all .3s ease;
-    background-color: 255, 255, 235;
+    background-color: rgb(255, 255, 235);
     color: rgb(4, 27, 21);
 }
 

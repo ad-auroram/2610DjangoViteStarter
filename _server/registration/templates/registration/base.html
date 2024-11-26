@@ -8,6 +8,45 @@
   <style>
     /* style your login pages here because the normal
       static asset flow is different now */
+      body {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+        background-color: rgb(4, 27, 21);
+        display:flex;
+        place-items: center;
+        flex-direction:column
+      }
+      form{
+        display:grid;
+        gap: 20px;
+      }
+      label {
+        display:grid;
+        color:rgb(255, 255, 235);
+        font-size:x-large;
+        align-items:center;
+      }
+      input {
+        margin: 1em;
+        height: 30px;
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+      .button{
+        font-size: 20px;
+        text-align: center;
+        padding: 15px 35px;
+        margin: 20px;
+        text-decoration: none;
+        border-radius: 15px;
+        transition: all .3s ease;
+        background-color: rgb(255, 255, 235);
+        color: rgb(4, 27, 21);
+      }
+      .space{
+        padding:3em;
+      }
   </style>
 </head>
 <body>
