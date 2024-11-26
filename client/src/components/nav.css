@@ -1,4 +1,4 @@
-#nav-example{
+#nav-bar{
     display:flex;
     flex-direction: row;
     top:0px;
@@ -7,6 +7,7 @@
     position:fixed;
     background-color: rgb(4, 27, 21);
     justify-content: space-between;
+    z-index: 1;
 }
 
 #nav-title{
@@ -19,7 +20,7 @@
 .nav-button{
     font-size: 20px;
     text-align: center;
-    padding: 15 px 35px;
+    padding: 15px 35px;
     margin: 20px;
     text-decoration: none;
     border-radius: 15px;

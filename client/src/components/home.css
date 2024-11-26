@@ -1,3 +1,5 @@
+
+
 #root{
     display: flex;
     flex-direction: column;
@@ -32,11 +34,15 @@
     justify-self: center;
 }
 
-.title {
+.title{
     font-size: large;
     position: relative;
     width:100%;
     left: -50px;
     justify-self: left;
   }
+
+.space{
+    padding: 75px;
+}
   

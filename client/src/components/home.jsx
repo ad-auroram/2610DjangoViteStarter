@@ -1,9 +1,10 @@
-import './main.css'
+import './home.css'
 import { useState, useEffect } from 'react'
 
-export function Main(){
+export function Home(){
     return (
         <>
+            <div className='space'></div>
             <div className='container'>
             <div className='char-box'>
                 <div className='title'>guy here</div>
@@ -42,4 +43,4 @@ export function Main(){
     )
 }
 
-export default Main;
+export default Home;

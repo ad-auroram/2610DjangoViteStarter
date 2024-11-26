@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './nav.css'
 
 export function Navbar(){
@@ -18,13 +19,13 @@ export function Navbar(){
     }
     return(
         <>
-        <header id="nav-example">
+        <header id="nav-bar">
             <section className="nav-container">
                 <h1 id="nav-title">Home</h1>
             </section>
             <section className="nav-container">
             <button onClick={logout} className='nav-button'>New Character</button>
-            <button onClick={logout} className='nav-button'>Profile</button>
+            <Link to="/profile" className='nav-button'>Profile</Link>
             <button onClick={logout} className='nav-button'>Logout</button>
             </section>
         </header>
