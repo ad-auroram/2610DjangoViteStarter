@@ -4,7 +4,8 @@ export function Profile(){
     return(
         <>
         <div className='space'></div>
-        <div>Hello world</div>
+        <div>User</div>
+        <div>Characters</div>
         </>
     )
 }

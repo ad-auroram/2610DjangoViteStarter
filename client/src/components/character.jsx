@@ -5,8 +5,9 @@ export function Character(){
         <>
         <div>Name</div>
         <div>Info</div>
-        <div>Picture</div>
+        <div>Avatar</div>
         <div>Edit but only if char is theirs</div>
+        <div>Image gallery</div>
         </>
     )
 }
