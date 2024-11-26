@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './nav.css'
 
 export function Navbar(){
-    const [count, setCount] = useState(0)
     
     async function logout() {
         const res = await fetch("/registration/logout/", {

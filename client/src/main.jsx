@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Main from './components/home.jsx'
+import Character from './components/character.jsx'
 import Profile from './components/profile.jsx'
 import {
   createHashRouter,
@@ -20,6 +21,10 @@ const router = createHashRouter([
       {
         path:"/profile",
         element: <Profile/>
+      },
+      {
+        path: "/character",
+        element: <Character />
       }
     ]
   }

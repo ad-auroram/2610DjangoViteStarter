@@ -1,15 +1,15 @@
 import './home.css'
-import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export function Home(){
     return (
         <>
             <div className='space'></div>
             <div className='container'>
-            <div className='char-box'>
+            <Link to="/character" className='char-box'>
                 <div className='title'>guy here</div>
                 <img className='avatar' src='https://f2.toyhou.se/file/f2-toyhou-se/users/JustMoosh?2'></img>
-            </div>
+            </Link>
             <div className='char-box'>
                 <div className='title'>guy here</div>
                 <div className='avatar'>woah info</div>
