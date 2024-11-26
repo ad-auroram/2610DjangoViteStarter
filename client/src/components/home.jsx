@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 export function Home(){
     return (
         <>
-            <div className='space'></div>
             <div className='container'>
             <Link to="/character" className='char-box'>
                 <div className='title'>guy here</div>

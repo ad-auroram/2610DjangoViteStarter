@@ -4,6 +4,7 @@ import App from './App.jsx'
 import Main from './components/home.jsx'
 import Character from './components/character.jsx'
 import Profile from './components/profile.jsx'
+import New from './components/newCharacter.jsx'
 import {
   createHashRouter,
   RouterProvider
@@ -25,6 +26,10 @@ const router = createHashRouter([
       {
         path: "/character",
         element: <Character />
+      },
+      {
+        path: "/new",
+        element: <New/>
       }
     ]
   }

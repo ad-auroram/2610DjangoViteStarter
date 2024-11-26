@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import './App.css'
-import Home from './components/home'
+import './index.css'
 import Navbar from './components/navbar'
 
 

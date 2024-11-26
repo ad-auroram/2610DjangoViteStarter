@@ -19,10 +19,10 @@ export function Navbar(){
         <>
         <header id="nav-bar">
             <section className="nav-container">
-                <h1 id="nav-title">Home</h1>
+                <Link to="/" id="nav-title">Library</Link>
             </section>
             <section className="nav-container">
-            <button onClick={logout} className='nav-button'>New Character</button>
+            <Link to="/new" className='nav-button'>New Character</Link>
             <Link to="/profile" className='nav-button'>Profile</Link>
             <button onClick={logout} className='nav-button'>Logout</button>
             </section>
