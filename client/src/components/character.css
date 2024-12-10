@@ -1,0 +1,66 @@
+#container{
+    display: grid;
+    align-self: center;
+    width: 65vw;
+    row-gap: 15px;
+    column-gap: 20px;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+}
+
+#top{
+    display: flex;
+    grid-row: 1;
+    grid-column: 1 / 4;
+}
+
+#avatar{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#name{
+    padding: 20px;
+    margin-left: 20px;
+    font-size: xx-large;
+}
+
+#info{
+    grid-column: 1 / 5;
+    grid-row: 5;
+    text-align: left;
+    width: inherit
+}
+
+#edit{
+    grid-row: 6;
+    grid-column: 5;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all .3s ease;
+    background-color: rgb(255, 255, 235);
+    color: rgb(4, 27, 21);
+}
+
+#edit:hover{
+    background-color: rgb(146, 112, 99);
+    border: 2px solid rgb(255, 255, 235);
+    color: rgb(255, 255, 235);
+    box-shadow: 2px 3px rgba(0,0,0,.25)
+}
+
+.container{
+    grid-row: 8;
+    grid-column: 1 / 5;
+    text-align: center
+}
+
+h2{
+    font-size:xx-large;
+    grid-row: 7;
+    justify-content: center;
+}
