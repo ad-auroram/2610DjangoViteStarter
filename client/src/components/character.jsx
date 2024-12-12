@@ -2,7 +2,7 @@ import './home.css'
 import './character.css'
 import { Link } from 'react-router-dom'
 
-export function Character(){
+export function Character(user){
     return(
         <>
         <div className='space'></div>

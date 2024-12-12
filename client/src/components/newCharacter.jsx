@@ -5,7 +5,7 @@ function handleSubmit(){
     //prevent default, watch the one tutorial ig
 }
 
-export function New(){
+export function New(user){
     //have it autofill character info
     return(
         <>

@@ -1,11 +1,13 @@
 import './home.css'
 import { Link } from 'react-router-dom'
 
-export function Profile(){
+export function Profile(user){
+    console.log(user.first_name)
+    console.log(user)
     return(
         <>
         <div className='space'></div>
-        <h2>User</h2>
+        <h2>{user.first_name}</h2>
         <h2>Characters:</h2>
         <div className='container'>
             <Link to="/character" className='char-box'>

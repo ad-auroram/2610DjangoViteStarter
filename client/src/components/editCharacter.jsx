@@ -5,7 +5,7 @@ function handleSubmit(){
     //prevent default, watch the one tutorial ig
 }
 
-export function Edit(){
+export function Edit(user){
     //or just have them upload url from the web
     return(
         <>
