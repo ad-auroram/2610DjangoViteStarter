@@ -1,9 +1,9 @@
 import './home.css'
 import { Link } from 'react-router-dom'
+import { useOutletContext } from 'react-router-dom';
 
-export function Profile(user){
-    console.log(user.first_name)
-    console.log(user)
+export function Profile() {
+  const { user } = useOutletContext();
     return(
         <>
         <div className='space'></div>

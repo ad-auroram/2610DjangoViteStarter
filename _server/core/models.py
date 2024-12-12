@@ -10,9 +10,8 @@ class Session(models.Model):
 
 class Character(models.Model):
     name= models.TextField()
-    review = models.TextField(blank=True)
-    rating = models.IntegerField(default=3)
-    share_publically = models.BooleanField()
+    info = models.TextField(blank=True)
+    avatar = models.TextField(blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Image(models.Model):

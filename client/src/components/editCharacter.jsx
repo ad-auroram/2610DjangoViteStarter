@@ -6,7 +6,6 @@ function handleSubmit(){
 }
 
 export function Edit(user){
-    //or just have them upload url from the web
     return(
         <>
         <form onSubmit={handleSubmit}>
