@@ -1,5 +1,6 @@
 import './home.css'
 import './character.css'
+import { Link } from 'react-router-dom'
 
 export function Character(){
     return(
@@ -17,7 +18,8 @@ Aliquam mi felis, tempus in elit nec, euismod pretium ante. Quisque ornare ornar
 
 In interdum purus quis tellus pretium dignissim. Maecenas et bibendum erat. Morbi non purus leo. Maecenas congue, dolor id tincidunt condimentum, libero nibh tempus leo, ut rhoncus lectus orci efficitur magna. Aliquam at diam non metus gravida lacinia sit amet non mauris. Donec nisi dolor, cursus in quam et, accumsan condimentum est. Donec neque neque, aliquam eget sollicitudin a, luctus id velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at nisi ac eros pellentesque sagittis pulvinar vitae nisl. Morbi semper in magna vestibulum aliquam. 
             </div>
-            <button id='edit'>Edit</button>
+            <button className='option' id='new'>New Image</button>
+            <Link to="/edit" id='edit' className='option'>Edit</Link>
             <h2>Gallery</h2>
             <div className='container'>
                 <div className='char-box'>

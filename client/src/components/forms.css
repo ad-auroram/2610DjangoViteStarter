@@ -1,0 +1,46 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin: 1em;
+    height: 30px;
+    width: 300px;    
+}
+
+label{
+    font-size: x-large;
+    text-align: left;
+}
+
+#submit{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all .3s ease;
+    background-color: rgb(255, 255, 235);
+    color: rgb(4, 27, 21);
+    width: 50%
+}
+
+#submit:hover{
+    background-color: rgb(146, 112, 99);
+    border: 2px solid rgb(255, 255, 235);
+    color: rgb(255, 255, 235);
+    box-shadow: 2px 3px rgba(0,0,0,.25)
+}
+
+#char-info{
+    height: 100px;
+    width: 300px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: small;
+}

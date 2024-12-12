@@ -35,6 +35,27 @@
 
 #edit{
     grid-row: 6;
+    grid-column: 4;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all .3s ease;
+    background-color: rgb(255, 255, 235);
+    color: rgb(4, 27, 21);
+    justify-self: flex-end;
+}
+
+#edit:hover{
+    background-color: rgb(146, 112, 99);
+    border: 2px solid rgb(255, 255, 235);
+    color: rgb(255, 255, 235);
+    box-shadow: 2px 3px rgba(0,0,0,.25)
+}
+
+#new{
+    grid-row: 6;
     grid-column: 5;
     width: 50%;
     font-size: 20px;
@@ -46,7 +67,7 @@
     color: rgb(4, 27, 21);
 }
 
-#edit:hover{
+#new:hover{
     background-color: rgb(146, 112, 99);
     border: 2px solid rgb(255, 255, 235);
     color: rgb(255, 255, 235);
@@ -63,4 +84,8 @@ h2{
     font-size:xx-large;
     grid-row: 7;
     justify-content: center;
+}
+
+a{
+    
 }

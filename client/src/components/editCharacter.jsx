@@ -5,8 +5,8 @@ function handleSubmit(){
     //prevent default, watch the one tutorial ig
 }
 
-export function New(){
-    //have it autofill character info
+export function Edit(){
+    //or just have them upload url from the web
     return(
         <>
         <form onSubmit={handleSubmit}>
@@ -22,4 +22,4 @@ export function New(){
     )
 }
 
-export default New
+export default Edit

@@ -5,6 +5,7 @@ import Main from './components/home.jsx'
 import Character from './components/character.jsx'
 import Profile from './components/profile.jsx'
 import New from './components/newCharacter.jsx'
+import Edit from './components/editCharacter.jsx'
 import {
   createHashRouter,
   RouterProvider
@@ -30,7 +31,11 @@ const router = createHashRouter([
       {
         path: "/new",
         element: <New/>
-      }
+      },
+      {
+        path: "/edit",
+        element: <Edit/>
+      }  
     ]
   }
 ])
