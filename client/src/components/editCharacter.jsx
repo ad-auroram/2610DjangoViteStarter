@@ -5,7 +5,7 @@ function handleSubmit(){
     //prevent default, watch the one tutorial ig
 }
 
-export function Edit(user){
+export function Edit(){
     return(
         <>
         <form onSubmit={handleSubmit}>

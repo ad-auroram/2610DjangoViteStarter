@@ -25,9 +25,8 @@ export function New(user){
             "X-CSRFToken": cookie.parse(document.cookie).csrftoken
           }
         })
-        console.log("test 1")
         const body = await res.json();
-        console.log("test 2")
+        window.location = "/";
       }
       
     

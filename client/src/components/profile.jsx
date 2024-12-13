@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import { useOutletContext } from 'react-router-dom';
 
 export function Profile() {
-  const { user } = useOutletContext();
+  const { user, characters } = useOutletContext();
+  const userChars = [];
+    console.log(characters)
+    console.log(user)
     return(
         <>
         <div className='space'></div>

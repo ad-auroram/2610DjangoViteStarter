@@ -49,6 +49,16 @@ def new(req):
 
         character.save()
         return JsonResponse({"character": model_to_dict(character)})
+    
 
-    characters = [model_to_dict(character) for character in req.user.character_set.all()]
+@login_required
+def characters(req):
+    characters = Character.objects.all()
+    characters = [model_to_dict(character) for character in characters]
     return JsonResponse({"characters": characters})
+
+@login_required
+def char(req, id):
+    character = Character.objects.filter(id=id)
+    character_dict = model_to_dict(character)
+    return JsonResponse({"character": character_dict})

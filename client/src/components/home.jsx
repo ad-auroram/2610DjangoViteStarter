@@ -1,42 +1,22 @@
 import './home.css'
 import { Link } from 'react-router-dom'
+import * as cookie from "cookie";
+import { useState, useEffect } from 'react'
+import { useOutletContext } from 'react-router-dom';
 
 export function Home(){
+    const { user, characters } = useOutletContext();
+    
     return (
-        <>
+        <>  
+            <h2>Recents:</h2>
             <div className='container'>
-            <Link to="/character" className='char-box'>
-                <div className='title'>guy here</div>
-                <img className='avatar' src='https://f2.toyhou.se/file/f2-toyhou-se/users/JustMoosh?2'></img>
-            </Link>
-            <div className='char-box'>
-                <div className='title'>guy here</div>
-                <div className='avatar'>woah info</div>
-            </div>
-            <div className='char-box'>
-                <div className='title'>guy here</div>
-                <div className='avatar'>woah info</div>
-            </div>
-            <div className='char-box'>
-                <div className='title'>guy here</div>
-                <div className='avatar'>woah info</div>
-            </div>
-            <div className='char-box'>
-                <div className='title'>guy here</div>
-                <div className='avatar'>woah info</div>
-            </div>
-            <div className='char-box'>
-                <div className='title'>guy here</div>
-                <div className='avatar'>woah info</div>
-            </div>
-            <div className='char-box'>
-                <div className='title'>guy here</div>
-                <div className='avatar'>woah info</div>
-            </div>
-            <div className='char-box'>
-                <div className='title'>guy here</div>
-                <div className='avatar'>woah info</div>
-            </div>
+            {characters.map(character =>
+            <Link to={`/character/${character.id}`} className="char-box" key={character.id}>
+                <div className="title">{character.name}</div>
+                <img className="avatar" src={character.avatar} alt={`${character.name} avatar`} />
+          </Link>
+            )}
         </div>
         </>
     )

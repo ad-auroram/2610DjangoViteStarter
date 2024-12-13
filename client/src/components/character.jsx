@@ -1,8 +1,36 @@
 import './home.css'
 import './character.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
-export function Character(user){
+export function Character(){
+    const { id } = useParams();
+    const [character, setCharacter] = useState(null)
+
+    async function getCharacter(id) {
+        const res = await fetch(`/char/${id}/`, {
+            credentials: "same-origin",
+        });
+    
+        if (res.ok) {
+            const body = await res.json();
+            setCharacter(body.character);
+        } else {
+            console.error("Failed to fetch character:", res.status);
+        }
+    }
+
+    useEffect(() => {
+        if (id) {
+            getCharacter(id);
+        }
+    }, [id]);
+    console.log(character)
+
+    if (!character) {
+        return <p>Loading...</p>;
+    }
+
     return(
         <>
         <div className='space'></div>

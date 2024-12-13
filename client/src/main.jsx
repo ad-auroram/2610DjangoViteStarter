@@ -25,7 +25,7 @@ const router = createHashRouter([
         element: <Profile/>
       },
       {
-        path: "/character",
+        path: "/character/:id",
         element: <Character />
       },
       {
