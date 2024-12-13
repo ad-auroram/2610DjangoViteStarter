@@ -6,6 +6,8 @@ import Character from './components/character.jsx'
 import Profile from './components/profile.jsx'
 import New from './components/newCharacter.jsx'
 import Edit from './components/editCharacter.jsx'
+import ImageForm from './components/addImage.jsx'
+
 import {
   createHashRouter,
   RouterProvider
@@ -35,7 +37,11 @@ const router = createHashRouter([
       {
         path: "/edit/:id",
         element: <Edit/>
-      }  
+      }  ,
+      {
+        path: "image/:id",
+        element: <ImageForm/>
+      }
     ]
   }
 ])

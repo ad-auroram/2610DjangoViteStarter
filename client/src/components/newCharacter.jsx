@@ -2,12 +2,14 @@ import './home.css'
 import './forms.css'
 import * as cookie from "cookie";
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 export function New(user){
     const [character, setCharacter] = useState('');
     const [info, setInfo] = useState('');
     const [image, setImage] = useState('');
+    const navigate = useNavigate()
 
     async function createCharacter(e) {
         e.preventDefault();
@@ -25,7 +27,7 @@ export function New(user){
           }
         })
         const body = await res.json();
-        window.location = "/";
+        navigate(`/profile/`);
       }
       
     

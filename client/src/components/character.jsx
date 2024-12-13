@@ -41,7 +41,7 @@ export function Character(){
             <div id='info'>
                 {character.info}
             </div>
-            <button className='option' id='new'>New Image</button>
+            <Link to={`/image/${character.id}`}className='option' id='new'>New Image</Link>
             <Link to={`/edit/${character.id}`} id='edit' className='option'>Edit</Link>
             <h2>Gallery</h2>
             <div className='container'>

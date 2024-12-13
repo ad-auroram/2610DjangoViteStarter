@@ -2,14 +2,14 @@ import './home.css'
 import './forms.css'
 import * as cookie from "cookie";
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 
 export function Edit(){
     const { id } = useParams();
-    const [myChar, setCharacter] = useState(null);
     const [name, setName] = useState('')
     const [info, setInfo] = useState('');
     const [image, setImage] = useState('');
+    const navigate = useNavigate()
 
 
     async function getCharacter(id) {
@@ -19,7 +19,6 @@ export function Edit(){
     
         if (res.ok) {
             const body = await res.json();
-            setCharacter(body.character);
             setName(body.character.name);
             setInfo(body.character.info);
             setImage(body.character.avatar);
@@ -43,8 +42,7 @@ export function Edit(){
             "X-CSRFToken": cookie.parse(document.cookie).csrftoken
           }
         })
-        const body = await res.json();
-        window.location = "/";
+        navigate(`/character/${id}/`);
       }
 
       useEffect(() => {

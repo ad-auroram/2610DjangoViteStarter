@@ -14,6 +14,6 @@ class Character(models.Model):
     avatar = models.TextField(blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-class Image(models.Model):
-    link = models.TextField(default="")
+class CharacterImage(models.Model):
+    link = models.TextField(null=True, blank=True)
     character =models.ForeignKey(Character, on_delete=models.CASCADE)

@@ -5,7 +5,7 @@ import os
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
-from .models import Character, Image
+from .models import Character, CharacterImage
 
 # Load manifest when server launches
 MANIFEST = {}
@@ -56,18 +56,20 @@ def char(req, id):
     character_dict = model_to_dict(character)
     return JsonResponse({"character": character_dict})
 
+
 @login_required
 def add_pic(req, id):
-    character = Character.objects.get(id=id)
     if req.method == "POST": 
+        print("problem?")
+        character = Character.objects.get(id=id)
         body = json.loads(req.body)
-        image = Image(
-            link=body["character"],
+        image = CharacterImage(
+            link=body["image"],
             character = character
         )
 
         image.save()
-        return JsonResponse({"character": model_to_dict(image)})
+        return JsonResponse({"image": model_to_dict(image)})
     
 @login_required
 def edit(req, id):
@@ -81,3 +83,5 @@ def edit(req, id):
 
         character.save()
         return JsonResponse({"character": model_to_dict(character)})
+    
+
