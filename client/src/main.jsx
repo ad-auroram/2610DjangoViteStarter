@@ -33,7 +33,7 @@ const router = createHashRouter([
         element: <New/>
       },
       {
-        path: "/edit",
+        path: "/edit/:id",
         element: <Edit/>
       }  
     ]

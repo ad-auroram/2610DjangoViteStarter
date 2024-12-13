@@ -10,8 +10,7 @@ export function New(user){
     const [image, setImage] = useState('');
 
     async function createCharacter(e) {
-        e.preventDefault(); // don't submit the form!
-        console.log()
+        e.preventDefault();
         const res = await fetch("/new/", {
           method: "post",
           credentials: "same-origin",

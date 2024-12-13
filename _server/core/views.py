@@ -5,7 +5,7 @@ import os
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
-from .models import Character
+from .models import Character, Image
 
 # Load manifest when server launches
 MANIFEST = {}
@@ -31,14 +31,7 @@ def me(req):
 
 @login_required
 def new(req):
-    if req.method == "POST":
-        try:
-            print("Raw request body:", req.body)  # Log raw POST body
-            body = json.loads(req.body)  # Parse JSON body
-            print("Parsed body:", body)
-        except Exception as e:
-            print("Error parsing JSON:", e)
-            return JsonResponse({"error": "Invalid JSON body"}, status=400)
+    if req.method == "POST": 
         body = json.loads(req.body)
         character = Character(
             name=body["character"],
@@ -59,7 +52,32 @@ def characters(req):
 
 @login_required
 def char(req, id):
-    print(req)
     character = Character.objects.get(id=id)
     character_dict = model_to_dict(character)
     return JsonResponse({"character": character_dict})
+
+@login_required
+def add_pic(req, id):
+    character = Character.objects.get(id=id)
+    if req.method == "POST": 
+        body = json.loads(req.body)
+        image = Image(
+            link=body["character"],
+            character = character
+        )
+
+        image.save()
+        return JsonResponse({"character": model_to_dict(image)})
+    
+@login_required
+def edit(req, id):
+    character = Character.objects.get(id=id)
+    if req.method == "POST": 
+        body = json.loads(req.body)
+        character.name=body["name"]
+        character.info=body["info"]
+        character.avatar=body["image"]
+        character.user=req.user
+
+        character.save()
+        return JsonResponse({"character": model_to_dict(character)})

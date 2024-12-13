@@ -25,7 +25,6 @@ export function Character(){
             getCharacter(id);
         }
     }, [id]);
-    console.log(character)
 
     if (!character) {
         return <p>Loading...</p>;
@@ -43,7 +42,7 @@ export function Character(){
                 {character.info}
             </div>
             <button className='option' id='new'>New Image</button>
-            <Link to="/edit" id='edit' className='option'>Edit</Link>
+            <Link to={`/edit/${character.id}`} id='edit' className='option'>Edit</Link>
             <h2>Gallery</h2>
             <div className='container'>
                 <div className='char-box'>
