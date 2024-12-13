@@ -59,6 +59,7 @@ def characters(req):
 
 @login_required
 def char(req, id):
-    character = Character.objects.filter(id=id)
+    print(req)
+    character = Character.objects.get(id=id)
     character_dict = model_to_dict(character)
     return JsonResponse({"character": character_dict})
