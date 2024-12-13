@@ -1,7 +1,7 @@
 import './home.css'
 import './forms.css'
 import * as cookie from "cookie";
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 export function ImageForm(){
@@ -23,7 +23,6 @@ export function ImageForm(){
                 "X-CSRFToken": cookie.parse(document.cookie).csrftoken
             }
             })
-            const body = await res.json();
             navigate(`/character/${id}/`);
         }
 

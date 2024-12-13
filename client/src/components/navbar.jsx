@@ -19,7 +19,7 @@ export function Navbar(){
         <>
         <header id="nav-bar">
             <section className="nav-container">
-                <Link to="/" id="nav-title">Library</Link>
+                <Link to="/" id="nav-title">The Tavern</Link>
             </section>
             <section className="nav-container">
             <Link to="/new" className='nav-button'>New Character</Link>

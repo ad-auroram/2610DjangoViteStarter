@@ -4,7 +4,7 @@ import { Link, useParams, useOutletContext } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 export function Character(){
-    const { user, characters } = useOutletContext();
+    const { user } = useOutletContext();
     const { id } = useParams();
     const [character, setCharacter] = useState(null)
     const [images, updateImgs] = useState([])

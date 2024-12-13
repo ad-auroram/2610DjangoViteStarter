@@ -2,7 +2,7 @@ import './home.css'
 import './forms.css'
 import * as cookie from "cookie";
 import { useState, useEffect } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 export function Edit(){
     const { id } = useParams();
@@ -65,7 +65,7 @@ export function Edit(){
                   value={info}
                   onChange={(e) => setInfo(e.target.value)}
               />
-              <label htmlFor="image">Avatar (as an image link):</label>
+              <label htmlFor="image">Avatar url:</label>
               <input
                   type="text"
                   id="image"
