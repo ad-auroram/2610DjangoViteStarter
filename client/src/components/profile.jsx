@@ -7,6 +7,7 @@ export function Profile() {
     const { user, characters } = useOutletContext();
   const [userChars, setChars] = useState(null);
 
+
     useEffect(() => {
         if (user && characters) {
           const myChars = characters.filter(
@@ -18,6 +19,8 @@ export function Profile() {
       if (!userChars) {
         return <p>No characters yet!</p>;
       }
+
+      
       
 
     return(
@@ -36,5 +39,6 @@ export function Profile() {
         </>
     )
 }
+
 
 export default Profile

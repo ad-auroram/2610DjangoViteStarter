@@ -9,4 +9,5 @@ urlpatterns = [
     path('char/<int:id>/', view=views.char, name="char"),
     path('edit/<int:id>/', view=views.edit, name="edit"),
     path('new-image/<int:id>/', view=views.add_pic, name="image"),
+    path('imgs/<int:id>/', view=views.get_pics, name="get-image"),
 ]

@@ -56,12 +56,20 @@ def char(req, id):
     character_dict = model_to_dict(character)
     return JsonResponse({"character": character_dict})
 
+@login_required
+def get_pics(req, id):
+    character = Character.objects.get(id=id)
+    images = CharacterImage.objects.filter(character=character)
+    images = [model_to_dict(image) for image in images]
+    return JsonResponse({"images": images})
+
 
 @login_required
 def add_pic(req, id):
+    character = Character.objects.get(id=id)
+    if req.user.id != character.user:
+        return
     if req.method == "POST": 
-        print("problem?")
-        character = Character.objects.get(id=id)
         body = json.loads(req.body)
         image = CharacterImage(
             link=body["image"],
@@ -74,6 +82,8 @@ def add_pic(req, id):
 @login_required
 def edit(req, id):
     character = Character.objects.get(id=id)
+    if req.user.id != character.user:
+        return
     if req.method == "POST": 
         body = json.loads(req.body)
         character.name=body["name"]
