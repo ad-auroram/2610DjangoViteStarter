@@ -64,7 +64,7 @@ export function Character(){
         <div className='space'></div>
         <div id='container'>
             <div id='top'>
-                <img id='avatar' src={character.avatar}></img>
+                <img id='avatar' src={character.avatar||"https://static-00.iconduck.com/assets.00/avatar-default-symbolic-icon-479x512-n8sg74wg.png"}></img>
                 <h1 id='name'>{character.name}</h1>
             </div>
             <div id='info'>

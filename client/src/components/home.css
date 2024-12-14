@@ -13,6 +13,7 @@
     align-self: center;
     width: 65vw;
     gap: 17px;
+    overflow-y: scroll;
 }
 
 .char-box{
@@ -43,5 +44,18 @@
 
 .space{
     padding: 75px;
+}
+
+#more{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all .3s ease;
+    background-color: rgb(255, 255, 235);
+    color: rgb(4, 27, 21);
+    width: 25%
 }
   

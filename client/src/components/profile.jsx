@@ -32,7 +32,7 @@ export function Profile() {
             {userChars.map((char) => (
                 <Link to={`/character/${char.id}`} className='char-box' key={char.id}>
                     <div className='title'>{char.name}</div>
-                    <img className='avatar' src={char.avatar}></img>
+                    <img className='avatar' src={char.avatar||"https://static-00.iconduck.com/assets.00/avatar-default-symbolic-icon-479x512-n8sg74wg.png"}></img>
                 </Link>
             ))}
         </div>

@@ -46,8 +46,8 @@ def new(req):
 
 @login_required
 def characters(req):
-    characters = Character.objects.all()
-    characters = [model_to_dict(character) for character in characters]
+    characters = Character.objects.all().order_by('-id')
+    characters = [model_to_dict(character) for character in characters] 
     return JsonResponse({"characters": characters})
 
 @login_required
